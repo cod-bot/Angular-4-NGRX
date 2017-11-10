@@ -1,0 +1,13 @@
+
+{{dataCount$ | async}}
+
+<form [formGroup]="form" (ngSubmit)="addPost(form.value)">
+  <div class="form-container">
+    <div class="row columns">
+      <label>Name
+        <input type="text" formControlName="name">
+      </label>    
+      <input type="submit" class="button expanded" value="Submit" [disabled]="!form.valid">
+    </div>
+  </div>
+</form>
